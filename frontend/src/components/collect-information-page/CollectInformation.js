@@ -8,7 +8,7 @@ import peanutsIcon from "./images/peanutsIcon.png"
 import cheeseIcon from "./images/cheeseIcon.png"
 import shellfishIcon from "./images/shellfishIcon.png"
 
-const CollectInformation = () => {
+const CollectInformation = ({username}) => {
    const [fitnessGoal, setFitnessGoal] = useState(null);
    const [peanutsAllergy, setPeanutsAllergy] = useState(false);
    const [dairyAllergy, setDairyAllergy] = useState(false);
@@ -18,6 +18,7 @@ const CollectInformation = () => {
 
   return (
     <div className="absolute w-[1404px]">
+      <div>{username}</div>
       <div className="absolute w-[683px] h-[330px] left-[54px] top-[30px] bg-[#cccccc]/[0.2] rounded-[30px]">
         <div className="absolute w-[380px] h-[38px] left-[152px] top-[120px] font-medium text-[30px] leading-[38px] text-[#1B1C57]">
           How much do you weigh?
@@ -34,6 +35,9 @@ const CollectInformation = () => {
                 type="text"
                 placeholder="Your weight here"
                 className="focus:outline-none font-medium text-[18px] leading-[22px] bg-transparent"
+                onChange={(event) => {
+                  setWeight(event.target.value);
+                }}
               />
             </div>
             <select className="absolute w-[63px] h-[30px] left-[275px] top-[18px] bg-black/[0.12] rounded-[32px] hover:cursor-pointer px-[5px]">
@@ -59,6 +63,9 @@ const CollectInformation = () => {
                 type="text"
                 placeholder="Your budget here"
                 className="focus:outline-none font-medium text-[18px] leading-[22px] bg-transparent"
+                onChange={(event) => {
+                  setDailyMealBudget(event.target.value);
+                }}
               />
             </div>
             <div className="absolute w-[63px] h-[30px] left-[275px] top-[18px] bg-black/[0.12] rounded-[32px] hover:cursor-default px-[5px]">
@@ -221,6 +228,7 @@ const CollectInformation = () => {
           </div>
         </div>
       </div>
+      {/* need another button for submitting */}
     </div>
   );
 };
