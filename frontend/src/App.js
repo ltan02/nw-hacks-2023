@@ -4,6 +4,7 @@ import "./App.css";
 import Landing from "./components/landing-page/Landing"
 import CollectInformation from "./components/collect-information-page/CollectInformation";
 import SignUp from "./components/signup-page/SignUp";
+import { Link } from "react-router-dom"
 
 function App() {
   return (
