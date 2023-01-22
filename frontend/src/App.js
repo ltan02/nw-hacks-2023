@@ -5,6 +5,8 @@ import Landing from "./components/landing-page/Landing";
 import CollectInformation from "./components/collect-information-page/CollectInformation";
 import Login from "./components/authentication/Login";
 import Signup from "./components/authentication/Signup";
+import SignUp from "./components/signup-page/SignUp";
+import { Link } from "react-router-dom"
 
 function App() {
   const [token, setToken] = useState("");
@@ -16,6 +18,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Landing authenticated={authenticated} />} />
+        <Route path="/signUp" element={<SignUp />} />
         <Route path="/collectInformation" element={<CollectInformation />} />
         <Route
           path="/login"

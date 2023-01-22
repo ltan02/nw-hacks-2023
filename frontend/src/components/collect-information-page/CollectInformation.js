@@ -16,6 +16,18 @@ const CollectInformation = () => {
    const [weight, setWeight] = useState(0);
    const [dailyMealBudget, setDailyMealBudget] = useState(0);
 
+   function isNumber(evt) {
+      evt = (evt) ? evt : window.event;
+      var charCode = (evt.which) ? evt.which : evt.keyCode;
+
+      if (charCode >31 && (charCode < 48 || charCode > 57)) {
+        alert("Only input numbers");
+        return false;
+      }
+
+      return true;
+   }
+
   return (
     <div className="absolute w-[1404px]">
       <div className="absolute w-[683px] h-[330px] left-[54px] top-[30px] bg-[#cccccc]/[0.2] rounded-[30px]">
