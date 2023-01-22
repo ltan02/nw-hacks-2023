@@ -14,23 +14,28 @@ const Landing = () => {
               PlateTrace
             </div>
           </div>
-          <div className="w-[800px] h-[28px] pl-[305px] items-center flex flex-row non-italic font-normal text-[24px] leading-[28px] text-center text-[#626687] opacity-[0.75]">
+          <div className="w-[800px] h-[28px] pl-[305px] items-center flex flex-row font-normal text-[24px] leading-[28px] text-center text-[#626687] opacity-[0.75]">
             <div className="mr-[5px]">find</div>
-            <Typewriter
-              options={{
-                strings: [
-                  "nutritious",
-                  "low-calorie",
-                  "healthy budget-friendly",
-                ],
-                autoStart: true,
-                loop: true,
-                pauseFor: 3000,
-              }}
-            />
+            <div className="underline underline-offset-4">
+              <Typewriter
+                options={{
+                  strings: [
+                    "nutritious",
+                    "low-calorie",
+                    "healthy budget-friendly",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                  pauseFor: 3000,
+                }}
+              />
+            </div>
             <div className="ml-[2px]">meals for you</div>
           </div>
-          <Link className="flex flex-row items-center px-[12px] py-[16px] gap-[4px] ml-[305px] w-[177px] h-[48px] bg-[#10B981] rounded-[32px] mt-[10px] cursor-pointer" to="/collectInformation">
+          <Link
+            className="flex flex-row items-center px-[12px] py-[16px] gap-[4px] ml-[305px] w-[177px] h-[48px] bg-[#10B981] rounded-[32px] mt-[10px] cursor-pointer"
+            to="/collectInformation"
+          >
             <div className="text-white w-[117px] h-[22px] font-semibold non-italic text-[20px] leading-[22px] ml-[5px]">
               Get Started
             </div>
