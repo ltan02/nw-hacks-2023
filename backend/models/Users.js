@@ -5,13 +5,33 @@ const UserSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    age: {
-        type: Number,
-        required: true
-    },
     username: {
         type: String,
         required: true
+    },
+    weight: {
+        type: Number,
+        required: true,
+    },
+    fitnessGoal: {
+        type: String,
+        required: true,
+    },
+    peanutsAllergy: {
+        type: Boolean,
+        required: true,
+    },
+    dairyAllergy: {
+        type: Boolean,
+        required: true,
+    },
+    shellfishAllergy: {
+        type: Boolean,
+        required: true,
+    },
+    dailyMealBudget: {
+        type: Number,
+        required: true,
     }
 });
 

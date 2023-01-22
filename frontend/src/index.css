@@ -11,5 +11,9 @@
 }
 
 @layer components {
-
+  .collectInformationTextBox {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 9px 89px rgba(89, 92, 219, 0.05);
+    border-radius: 32px;
+  }
 }

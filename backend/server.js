@@ -10,10 +10,6 @@ app.use(express.json());
 
 mongoose.connect(process.env.CONNECTION_STRING);
 
-app.get("/message", (req, res) => {
-  res.json({ message: "Hello from server!" });
-});
-
 app.get("/getUsers", (req, res) => {
   UserModel.find({}, (err, result) => {
     if (err) {
