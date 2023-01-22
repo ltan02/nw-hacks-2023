@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Axios from "axios";
+import Landing from "./components/landing-page/Landing"
+import CollectInformation from "./components/collect-information-page/CollectInformation";
 
 function App() {
   const [listOfUsers, setListOfUsers] = useState([]);
@@ -67,6 +70,12 @@ function App() {
         }}/>
         <button onClick={createUser}>Create User</button>
       </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/collectInformation" element={<CollectInformation />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
