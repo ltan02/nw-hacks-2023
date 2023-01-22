@@ -34,7 +34,7 @@ const Landing = () => {
           </div>
           <Link
             className="flex flex-row items-center px-[12px] py-[16px] gap-[4px] ml-[305px] w-[177px] h-[48px] bg-[#10B981] rounded-[32px] mt-[10px] cursor-pointer"
-            to="/collectInformation"
+            to="/signUp"
           >
             <div className="text-white w-[117px] h-[22px] font-semibold non-italic text-[20px] leading-[22px] ml-[5px]">
               Get Started
