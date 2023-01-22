@@ -1,10 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import veggieBowl from "../landing-page/images/veggie-taco-bowl-veggie-bowl-transparent-11563046631kukgnicj7g.png";
 import Typewriter from "typewriter-effect";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 
-const Landing = () => {
+const Landing = (authenticated) => {
   return (
     <div className="overflow-x-hidden overflow-y-hidden flex items-center h-screen w-screen">
       <div className="flex flex-row items-center">
@@ -34,7 +34,7 @@ const Landing = () => {
           </div>
           <Link
             className="flex flex-row items-center px-[12px] py-[16px] gap-[4px] ml-[305px] w-[177px] h-[48px] bg-[#10B981] rounded-[32px] mt-[10px] cursor-pointer"
-            to="/collectInformation"
+            to={authenticated ? "/collectInformation" : "/login"}
           >
             <div className="text-white w-[117px] h-[22px] font-semibold non-italic text-[20px] leading-[22px] ml-[5px]">
               Get Started
